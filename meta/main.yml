@@ -1,0 +1,22 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Carl Buchmann
+  description: Installs and configures Ansible Engine + module dependencies
+  company: none
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.6
+  platforms:
+    - name: EL
+      version:
+        - 7
+    - name: Ubuntu
+      versions:
+        - bionic
+  galaxy_tags:
+    - ansible
+    - centos
+    - rhel
+    - ubuntu
+    - debian
