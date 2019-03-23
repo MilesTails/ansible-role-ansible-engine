@@ -12,13 +12,19 @@
     state: present
   when: ansible_os_family == "RedHat"
 
-# Install Python requirements
+# Install Python requirements and upgrade python setup tools
 - name: install python tools and cryptography
   become: true
   package:
     name: "{{ item }}"
     state: present
   with_items: "{{ python_tools }}"
+
+- name: upgrade python setup tools
+  become: true
+  pip:
+    name: setuptools
+    extra_args: "--upgrade"
 
 # Configure Ansible to support Windows Remote management with Kerberos Authentication
 - name: install kerberos libraries dependencies
@@ -63,6 +69,7 @@
   become: true
   pip:
     name:
+      - napalm
       - napalm-ansible
       - python-gssapi
 
