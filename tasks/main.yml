@@ -84,7 +84,7 @@
     name:
       - f5-sdk
       - bigsuds
-      - deepdiff
+      - deepdiff==3.3.0
 
 - name: install AWS dependencies
   become: true
