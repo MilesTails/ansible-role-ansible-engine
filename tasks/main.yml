@@ -55,6 +55,13 @@
 
 # Install various python libraries for module support
 
+- name: install Arista dependencies for EOS and CVP
+  become: true
+  pip:
+    name:
+      - pyeapi
+      - cvprac
+
 - name: install ansible microsoft azure dependencies
   become: true
   pip:
